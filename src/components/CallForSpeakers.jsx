@@ -33,13 +33,13 @@ export default function CallForSpeakers() {
 
           {/* Subtitle */}
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto">
-            Got an AWS story to share? We're looking for speakers for <span className="text-white font-semibold">SCD Puducherry 2026</span>.
-            Lightning talks, deep dives, workshops — all levels welcome.
+            We're inviting industry professionals, AWS practitioners, and domain experts to deliver sessions at <span className="text-white font-semibold">SCD Puducherry 2026</span>.
+            Share your expertise through technical talks, deep dives, or hands-on workshops.
           </p>
 
           {/* Quick tags */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
-            {['Cloud', 'AI/ML', 'Serverless', 'DevOps', 'Security', 'Student Projects'].map(tag => (
+            {['Cloud', 'AI/ML', 'Serverless', 'DevOps', 'Security'].map(tag => (
               <span key={tag} className="px-3 py-1 rounded-full text-xs font-medium"
                 style={{ background: 'rgba(139,92,246,0.10)', border: '1px solid rgba(139,92,246,0.20)', color: '#c4b5fd' }}>
                 {tag}
@@ -70,7 +70,7 @@ export default function CallForSpeakers() {
             </svg>
           </a>
 
-          <p className="text-gray-600 text-xs mt-3">Open until slots are filled · All experience levels welcome</p>
+          <p className="text-gray-600 text-xs mt-3">Open until slots are filled · Technical sessions, deep dives & workshops</p>
         </div>
       </div>
     </section>

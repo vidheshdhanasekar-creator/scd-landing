@@ -5,8 +5,7 @@ import TracksSection from '../components/TracksSection';
 import SpeakersSection from '../components/SpeakersSection';
 import SponsorsSection from '../components/SponsorsSection';
 import CallForSpeakers from '../components/CallForSpeakers';
-import TeamSection from '../components/TeamSection';
-// import SponsorshipCTA from '../components/SponsorshipCTA';
+import ContactSection from '../components/ContactSection';
 
 export default function HomePage() {
   return (
@@ -18,8 +17,7 @@ export default function HomePage() {
       <SpeakersSection />
       <SponsorsSection />
       <CallForSpeakers />
-      <TeamSection />
-      {/* <SponsorshipCTA /> */}
+      <ContactSection />
     </main>
   );
 }

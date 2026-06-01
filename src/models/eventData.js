@@ -26,7 +26,8 @@ export const navLinks = [
   { label: 'Speakers',          href: '#speakers' },
   { label: 'Sponsors',          href: '#sponsors' },
   { label: 'Call for Speakers', href: '#call-for-speakers' },
-  { label: 'Code of Conduct',   href: '#conduct' },
+  { label: 'Contact Us',        href: '#contact' },
+  { label: 'Code of Conduct',   href: '#conduct', isCoC: true },
 ];
 
 // ─── Tracks ──────────────────────────────────────────────────────────────────
@@ -51,14 +52,14 @@ export const tracks = [
     tags: ['Hands-on Labs', 'Live Coding', 'AWS Console', 'Projects'],
     color: 'from-violet-600 to-purple-800',
     accent: '#7c3aed',
-    stat: '4 Labs',
+    stat: '2 Workshops',
   },
   {
     id: 3,
-    title: 'Panel Discussions',
+    title: 'Ad Panel & Q/A',
     icon: '💬',
     number: '03',
-    description: 'Engaging conversations with cloud leaders, startup founders, and AWS heroes on the future of cloud computing and career paths.',
+    description: 'Engaging conversations with cloud leaders, startup founders, and AWS heroes on the future of cloud computing and career paths. Live Q&A included.',
     tags: ['Industry Leaders', 'Career Paths', 'Cloud Future', 'Q&A'],
     color: 'from-purple-700 to-indigo-700',
     accent: '#6d28d9',
@@ -69,8 +70,8 @@ export const tracks = [
     title: 'Hackathon',
     icon: '🏆',
     number: '04',
-    description: 'A high-energy 6-hour build challenge. Form teams, pick a problem, and build an AWS-powered solution. Prizes await the best builders.',
-    tags: ['Team Challenge', '6 Hours', 'AWS Credits', 'Prizes'],
+    description: 'A high-energy build challenge. Form teams, pick a problem, and build an AWS-powered solution. Swags & prizes await the best builders.',
+    tags: ['Team Challenge', 'Hybrid', 'Swags', 'Prizes'],
     color: 'from-indigo-600 to-purple-700',
     accent: '#4f46e5',
     stat: '₹ Prizes',

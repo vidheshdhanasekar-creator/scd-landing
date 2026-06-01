@@ -100,7 +100,7 @@ function HoloTicket({ flipped, onFlip }) {
             {/* Details */}
             <div className="space-y-2.5 flex-1">
               {[
-                { icon: '📅', label: 'Date', value: eventData.date },
+                { icon: '📅', label: 'Date', value: eventData.date, sub: '8:00 AM – 4:30 PM' },
                 { icon: '🏛️', label: 'Venue', value: eventData.venueFull, sub: eventData.location },
               ].map(item => (
                 <div key={item.label}
@@ -115,12 +115,7 @@ function HoloTicket({ flipped, onFlip }) {
                 </div>
               ))}
 
-              {/* VIP badge */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full mt-1"
-                style={{ background: 'linear-gradient(135deg,rgba(245,158,11,0.15),rgba(234,179,8,0.10))', border: '1px solid rgba(245,158,11,0.25)' }}>
-                <span className="text-amber-400 text-xs">★</span>
-                <span className="text-amber-300 text-[10px] font-black tracking-wider">VIP COMMUNITY PASS</span>
-              </div>
+
             </div>
 
             {/* Stub */}
@@ -128,7 +123,7 @@ function HoloTicket({ flipped, onFlip }) {
               <div className="flex items-center justify-between mb-2">
                 <div>
                   <div className="text-[9px] text-purple-400 font-black tracking-widest">TICKET #SCD2026</div>
-                  <div className="text-[9px] text-gray-600">konfhub.com</div>
+                  <div className="text-[9px] text-gray-600">meetup.com</div>
                 </div>
                 <div className="text-right">
                   <div className="text-[9px] text-gray-500">Organizer</div>
@@ -289,10 +284,7 @@ export default function RegisterSection() {
               </svg>
             </a>
 
-            <div className="flex items-center gap-2 opacity-30">
-              <img src="/aws.svg" alt="AWS" className="h-4 w-auto brightness-0 invert" onError={e => e.target.style.display='none'} />
-              <span className="text-xs text-gray-500">Powered by KonfHub</span>
-            </div>
+
           </div>
 
           <style>{`
