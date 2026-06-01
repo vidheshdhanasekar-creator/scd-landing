@@ -5,7 +5,7 @@ const contacts = [
   { name: 'Mrs. A. Ilakkia', role: 'Faculty Coordinator — AI', phone: '+91 98941 82905', tag: 'Faculty' },
   { name: 'Vishwa Pandiyan',   role: 'Student Coordinator',      phone: '+91 93841 57111', tag: 'Student' },
   { name: 'Vidhesh D',         role: 'Student Coordinator',      phone: '+91 81220 60406', tag: 'Student' },
-  { name: 'Aisvamalar A',      role: 'Student Coordinator',      phone: '+91 70946 68232', tag: 'Student' },
+  { name: 'Vaishal Malu',      role: 'Student Coordinator',      phone: '+91 9345671593', tag: 'Student' },
   { name: 'Daniel Sebastin A', role: 'Student Coordinator',      phone: '+91 76397 63119', tag: 'Student' },
 ];
 
