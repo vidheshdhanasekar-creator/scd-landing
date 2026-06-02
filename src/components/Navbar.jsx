@@ -1,76 +1,7 @@
 import { useState } from 'react';
 import { useNavbar } from '../controllers/useNavbar';
-import { navLinks, eventData, whyAttendItems } from '../models/eventData';
-
-// ── Code of Conduct Modal ─────────────────────────────────────────────────────
-function CoCModal({ open, onClose }) {
-  if (!open) return null;
-  return (
-    <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" onClick={e => e.target === e.currentTarget && onClose()}>
-      <div className="absolute inset-0 bg-black/75 backdrop-blur-md" onClick={onClose} />
-      <div className="relative w-full max-w-2xl max-h-[85vh] flex flex-col rounded-3xl overflow-hidden shadow-2xl"
-        style={{ background: 'linear-gradient(160deg,#0f0520,#0a0a0f)', border: '1px solid rgba(139,92,246,0.25)', boxShadow: '0 0 80px rgba(109,40,217,0.25)' }}>
-        <div className="h-[2px] flex-shrink-0" style={{ background: 'linear-gradient(90deg,#6d28d9,#a855f7,#c084fc,#a855f7,#6d28d9)' }} />
-        <div className="flex items-start justify-between px-7 py-5 border-b border-white/5 flex-shrink-0">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl"
-              style={{ background: 'rgba(139,92,246,0.15)', border: '1px solid rgba(139,92,246,0.30)' }}>📋</div>
-            <div>
-              <div className="text-white font-black text-lg">Code of Conduct</div>
-              <div className="text-purple-400 text-[10px] font-bold tracking-widest uppercase mt-0.5">AWS Student Builder Group · SMVEC</div>
-            </div>
-          </div>
-          <button onClick={onClose} className="w-8 h-8 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/8 transition-all"
-            style={{ border: '1px solid rgba(255,255,255,0.08)' }}>✕</button>
-        </div>
-        <div className="flex-1 overflow-y-auto px-7 py-6 space-y-6">
-          {[
-            { title: 'Our Commitment', body: 'AWS Student Builder Group SMVEC is dedicated to providing a respectful, inclusive, and harassment-free environment for all participants — attendees, speakers, sponsors, and volunteers alike.' },
-            {
-              title: 'Expected Behaviour', items: [
-                'Treat all participants with respect and professionalism.',
-                'Refrain from disruptive, offensive, or discriminatory speech and behaviour.',
-                'Do not interfere with the operation of the event or its sessions.',
-                'Comply with instructions from event staff and organizers.',
-                'Adhere to all applicable laws and event-specific requirements.',
-              ]
-            },
-            { title: 'Scope', body: 'This Code of Conduct applies to all event spaces — physical and digital — including sessions, networking areas, social media, and any associated online platforms.' },
-            { title: 'Enforcement', body: 'Violations may result in removal from the event and exclusion from future events. All decisions are at the sole discretion of the organizing team. Law enforcement will be involved where appropriate.' },
-          ].map((s, i) => (
-            <div key={i}>
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-1 h-5 rounded-full" style={{ background: 'linear-gradient(180deg,#a855f7,#6d28d9)' }} />
-                <h3 className="text-white font-black text-base">{s.title}</h3>
-              </div>
-              {s.body && <p className="text-gray-400 text-sm leading-relaxed pl-3">{s.body}</p>}
-              {s.items && (
-                <div className="space-y-2 pl-3">
-                  {s.items.map((item, j) => (
-                    <div key={j} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-black mt-0.5"
-                        style={{ background: 'rgba(139,92,246,0.15)', border: '1px solid rgba(139,92,246,0.25)', color: '#a855f7' }}>{j + 1}</span>
-                      <p className="text-gray-400 text-sm leading-relaxed">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-          <div className="p-4 rounded-2xl" style={{ background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.18)' }}>
-            <div className="text-white font-black text-sm mb-1">Report an Incident</div>
-            <a href={`mailto:${eventData.email}`} className="text-purple-400 text-xs font-semibold hover:text-purple-300 transition-colors">{eventData.email}</a>
-          </div>
-        </div>
-        <div className="px-7 py-4 border-t border-white/5 flex items-center justify-between flex-shrink-0">
-          <span className="text-gray-600 text-xs">AWS Student Builder Group SMVEC</span>
-          <button onClick={onClose} className="px-4 py-2 rounded-xl text-white text-xs font-bold hover:scale-105 transition-all"
-            style={{ background: 'linear-gradient(135deg,#6d28d9,#7c3aed)' }}>Close</button>
-        </div>
-      </div>
-    </div>
-  );
-}
+import { navLinks, eventData } from '../models/eventData';
+import CoCModal from './CoCModal';
 
 export default function Navbar() {
   const { scrolled, mobileOpen, toggleMobile, closeMobile, activeSection } = useNavbar();
