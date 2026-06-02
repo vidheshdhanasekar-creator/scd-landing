@@ -168,10 +168,30 @@ export default function HeroSection() {
           />
         </div>
 
+        {/* ── Date & Venue Badge ── */}
+        <div
+          className={`mb-5 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          style={{ transitionDelay: '0.2s' }}
+        >
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-purple-500/20 bg-purple-950/20 backdrop-blur-md shadow-[0_4px_20px_rgba(139,92,246,0.12)]">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+            </span>
+            <span className="text-[11px] font-black tracking-[0.2em] text-white uppercase">
+              25.july.2026
+            </span>
+            <span className="w-[1px] h-3 bg-purple-500/30" />
+            <span className="text-[11px] font-bold tracking-[0.15em] text-purple-300 uppercase">
+              {eventData.venue} · {eventData.location}
+            </span>
+          </div>
+        </div>
+
         {/* ── Main title ── */}
         <div
           className={`mb-4 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-          style={{ transitionDelay: '0.2s' }}
+          style={{ transitionDelay: '0.25s' }}
         >
           <h1
             className="font-black leading-[1.0] tracking-tight"
@@ -195,7 +215,7 @@ export default function HeroSection() {
         {/* ── Hashtag ── */}
         <div
           className={`mb-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          style={{ transitionDelay: '0.3s' }}
+          style={{ transitionDelay: '0.35s' }}
         >
           <span className="text-purple-400 font-bold tracking-[0.3em] text-sm sm:text-base">
             {eventData.hashtag}
@@ -205,7 +225,7 @@ export default function HeroSection() {
         {/* ── Stats row ── */}
         <div
           className={`flex flex-wrap items-center justify-center gap-3 mb-8 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          style={{ transitionDelay: '0.4s' }}
+          style={{ transitionDelay: '0.45s' }}
         >
           <StatPill value="500+" label="Attendees" />
           <StatPill value="4" label="Tracks" />
@@ -216,7 +236,7 @@ export default function HeroSection() {
         {/* ── CTA buttons ── */}
         <div
           className={`flex flex-wrap items-center justify-center gap-3 mb-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          style={{ transitionDelay: '0.5s' }}
+          style={{ transitionDelay: '0.55s' }}
         >
           <a
             href={eventData.registerLink}

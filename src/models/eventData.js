@@ -2,7 +2,7 @@
 export const eventData = {
   name: 'Student Community Day',
   shortName: 'SCD2026',
-  hashtag: '#SMVECSCD2026',
+  hashtag: '#SCDPY2026',
   location: 'Pondicherry',
   venue: 'SMVEC',
   venueFull: 'Sri Manakula Vinayagar Engineering College',
@@ -21,14 +21,14 @@ export const eventData = {
 
 // ─── Navigation Links ────────────────────────────────────────────────────────
 export const navLinks = [
-  { label: 'Get Tickets',       href: '#register',          highlight: true },
-  { label: 'Tracks',            href: '#tracks' },
-  { label: 'Wht Attend?',       href: '#why-attend' },
-  { label: 'Speakers',          href: '#speakers' },
-  { label: 'Sponsors',          href: '#sponsors' },
+  { label: 'Get Tickets', href: '#register', highlight: true },
+  { label: 'Tracks', href: '#tracks' },
+  { label: 'Wht Attend?', href: '#why-attend' },
+  { label: 'Speakers', href: '#speakers' },
+  { label: 'Sponsors', href: '#sponsors' },
   { label: 'Call for Speakers', href: '#call-for-speakers' },
-  { label: 'Contact Us',        href: '#contact' },
-  { label: 'Code of Conduct',   href: '#conduct',           isCoC: true },
+  { label: 'Contact Us', href: '#contact' },
+  { label: 'Code of Conduct', href: '#conduct', isCoC: true },
 ];
 
 export const whyAttendItems = [
