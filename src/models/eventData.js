@@ -23,11 +23,24 @@ export const eventData = {
 export const navLinks = [
   { label: 'Get Tickets',       href: '#register',          highlight: true },
   { label: 'Tracks',            href: '#tracks' },
+  { label: 'Wht Attend?',       href: '#why-attend' },
   { label: 'Speakers',          href: '#speakers' },
   { label: 'Sponsors',          href: '#sponsors' },
   { label: 'Call for Speakers', href: '#call-for-speakers' },
   { label: 'Contact Us',        href: '#contact' },
-  { label: 'Code of Conduct',   href: '#conduct', isCoC: true },
+  { label: 'Code of Conduct',   href: '#conduct',           isCoC: true },
+];
+
+export const whyAttendItems = [
+  { text: 'Learn from industry experts and AWS community leaders', icon: '🎓' },
+  { text: 'Build practical, real-world cloud skills', icon: '🛠️' },
+  { text: 'Participate in the flagship #Include1.0 Hackathon', icon: '🏆' },
+  { text: 'Network with like-minded tech enthusiasts and industry experts', icon: '🤝' },
+  { text: 'Refreshments & Lunch Included', icon: '🍽️', highlight: true },
+  { text: 'Gain exposure to emerging technologies and industry trends', icon: '🔮' },
+  { text: 'Receive an official participation Credly Badge', icon: '🏅' },
+  { text: 'Win exciting prizes, certificates, and AWS swag', icon: '🎁' },
+  { text: 'Become part of the AWS community ecosystem', icon: '☁️' }
 ];
 
 // ─── Tracks ──────────────────────────────────────────────────────────────────
@@ -80,15 +93,15 @@ export const tracks = [
 
 // ─── Team Roles ───────────────────────────────────────────────────────────────
 export const teamRoles = [
-  { id: 1, role: 'Captain',               initials: 'VP', description: 'Leading the vision and strategy' },
-  { id: 2, role: 'Management Lead',        initials: 'A',  description: 'Operations & team coordination' },
-  { id: 3, role: 'Content Creation Lead',  initials: 'K',  description: 'Storytelling & content strategy' },
-  { id: 4, role: 'Technical Lead',         initials: 'MK', description: 'AWS architecture & tech stack' },
-  { id: 5, role: 'Event Management Lead',  initials: 'V',  description: 'On-ground event execution' },
-  { id: 6, role: 'Treasurer',              initials: 'J',  description: 'Budget & financial planning' },
-  { id: 7, role: 'Outreach Lead',          initials: 'VM', description: 'Community & partnerships' },
-  { id: 8, role: 'Hosting Lead',           initials: 'S',  description: 'Stage presence & MC duties' },
-  { id: 9, role: 'Social Media Lead',      initials: 'R',  description: 'Social media & campaigns' },
+  { id: 1, role: 'Captain', initials: 'VP', description: 'Leading the vision and strategy' },
+  { id: 2, role: 'Management Lead', initials: 'A', description: 'Operations & team coordination' },
+  { id: 3, role: 'Content Creation Lead', initials: 'K', description: 'Storytelling & content strategy' },
+  { id: 4, role: 'Technical Lead', initials: 'MK', description: 'AWS architecture & tech stack' },
+  { id: 5, role: 'Event Management Lead', initials: 'V', description: 'On-ground event execution' },
+  { id: 6, role: 'Treasurer', initials: 'J', description: 'Budget & financial planning' },
+  { id: 7, role: 'Outreach Lead', initials: 'VM', description: 'Community & partnerships' },
+  { id: 8, role: 'Hosting Lead', initials: 'S', description: 'Stage presence & MC duties' },
+  { id: 9, role: 'Social Media Lead', initials: 'R', description: 'Social media & campaigns' },
 ];
 
 // ─── Sponsors ─────────────────────────────────────────────────────────────────

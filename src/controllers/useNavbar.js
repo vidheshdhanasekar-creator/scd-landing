@@ -10,7 +10,7 @@ export function useNavbar() {
       setScrolled(window.scrollY > 60);
 
       // Determine active section
-      const sections = ['register', 'tracks', 'speakers', 'sponsors', 'conduct'];
+      const sections = ['register', 'tracks', 'why-attend', 'speakers', 'sponsors', 'conduct'];
       for (const id of sections.reverse()) {
         const el = document.getElementById(id);
         if (el && window.scrollY >= el.offsetTop - 120) {
