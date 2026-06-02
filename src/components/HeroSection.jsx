@@ -168,10 +168,22 @@ export default function HeroSection() {
           />
         </div>
 
+        {/* ── Date Wording ── */}
+        <div
+          className={`mb-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          style={{ transitionDelay: '0.2s' }}
+        >
+          <span 
+            className="text-xs sm:text-sm font-black tracking-[0.35em] text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-300 to-fuchsia-400 drop-shadow-[0_2px_12px_rgba(168,85,247,0.45)] uppercase select-none"
+          >
+            25.july.2026
+          </span>
+        </div>
+
         {/* ── Main title ── */}
         <div
           className={`mb-4 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-          style={{ transitionDelay: '0.2s' }}
+          style={{ transitionDelay: '0.25s' }}
         >
           <h1
             className="font-black leading-[1.0] tracking-tight"
@@ -194,23 +206,11 @@ export default function HeroSection() {
 
         {/* ── Hashtag ── */}
         <div
-          className={`mb-4 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          style={{ transitionDelay: '0.3s' }}
-        >
-          <span className="text-purple-400 font-bold tracking-[0.3em] text-sm sm:text-base">
-            {eventData.hashtag}
-          </span>
-        </div>
-
-        {/* ── Date Wording ── */}
-        <div
           className={`mb-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           style={{ transitionDelay: '0.35s' }}
         >
-          <span 
-            className="text-xs sm:text-sm font-black tracking-[0.35em] text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-300 to-fuchsia-400 drop-shadow-[0_2px_12px_rgba(168,85,247,0.45)] uppercase select-none"
-          >
-            25.july.2026
+          <span className="text-purple-400 font-bold tracking-[0.3em] text-sm sm:text-base">
+            {eventData.hashtag}
           </span>
         </div>
 
