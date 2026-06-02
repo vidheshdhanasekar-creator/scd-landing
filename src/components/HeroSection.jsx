@@ -168,23 +168,27 @@ export default function HeroSection() {
           />
         </div>
 
-        {/* ── Date & Venue Badge ── */}
+        {/* ── Date Badge ── */}
         <div
-          className={`mb-5 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          className={`mb-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           style={{ transitionDelay: '0.2s' }}
         >
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-purple-500/20 bg-purple-950/20 backdrop-blur-md shadow-[0_4px_20px_rgba(139,92,246,0.12)]">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
-            </span>
-            <span className="text-[11px] font-black tracking-[0.2em] text-white uppercase">
-              25.july.2026
-            </span>
-            <span className="w-[1px] h-3 bg-purple-500/30" />
-            <span className="text-[11px] font-bold tracking-[0.15em] text-purple-300 uppercase">
-              {eventData.venue} · {eventData.location}
-            </span>
+          <div className="relative inline-block group">
+            {/* Ambient Background Glow */}
+            <div className="absolute -inset-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-500 rounded-full opacity-35 blur-md group-hover:opacity-50 transition duration-700" />
+            
+            {/* Main Badge Container */}
+            <div className="relative flex items-center gap-3 px-6 py-2 rounded-full bg-[#0d091a]/90 border border-purple-500/30 backdrop-blur-xl shadow-[0_8px_32px_rgba(139,92,246,0.15)] group-hover:border-purple-400/50 transition-all duration-300">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-500"></span>
+              </span>
+              <span 
+                className="text-xs font-black tracking-[0.25em] text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-100 to-purple-200 uppercase select-none"
+              >
+                25.july.2026
+              </span>
+            </div>
           </div>
         </div>
 
