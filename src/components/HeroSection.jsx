@@ -28,11 +28,11 @@ function HeroCanvas() {
 
     // Aurora waves — spread across full height
     const auroraWaves = [
-      { hue: 270, amp: 0.08, freq: 0.7, phase: 0.0,  speed: 0.013, y: 0.18, alpha: 0.42 },
-      { hue: 290, amp: 0.10, freq: 1.0, phase: 1.2,  speed: 0.017, y: 0.32, alpha: 0.35 },
-      { hue: 260, amp: 0.09, freq: 0.6, phase: 2.4,  speed: 0.010, y: 0.48, alpha: 0.30 },
-      { hue: 310, amp: 0.07, freq: 1.3, phase: 0.8,  speed: 0.019, y: 0.62, alpha: 0.28 },
-      { hue: 280, amp: 0.11, freq: 0.9, phase: 3.1,  speed: 0.014, y: 0.75, alpha: 0.25 },
+      { hue: 270, amp: 0.08, freq: 0.7, phase: 0.0, speed: 0.013, y: 0.18, alpha: 0.42 },
+      { hue: 290, amp: 0.10, freq: 1.0, phase: 1.2, speed: 0.017, y: 0.32, alpha: 0.35 },
+      { hue: 260, amp: 0.09, freq: 0.6, phase: 2.4, speed: 0.010, y: 0.48, alpha: 0.30 },
+      { hue: 310, amp: 0.07, freq: 1.3, phase: 0.8, speed: 0.019, y: 0.62, alpha: 0.28 },
+      { hue: 280, amp: 0.11, freq: 0.9, phase: 3.1, speed: 0.014, y: 0.75, alpha: 0.25 },
     ];
 
     // Floating orbs — more, spread full height
@@ -173,10 +173,10 @@ export default function HeroSection() {
           className={`mb-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           style={{ transitionDelay: '0.2s' }}
         >
-          <span 
+          <span
             className="text-xs sm:text-sm font-black tracking-[0.35em] text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-300 to-fuchsia-400 drop-shadow-[0_2px_12px_rgba(168,85,247,0.45)] uppercase select-none"
           >
-            25.july.2026
+            25 July 2026
           </span>
         </div>
 
