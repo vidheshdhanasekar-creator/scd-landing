@@ -17,26 +17,25 @@ export default function Navbar() {
       <nav
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
-          paddingTop: scrolled ? '12px' : '0px',
-          paddingLeft: scrolled ? '16px' : '0px',
-          paddingRight: scrolled ? '16px' : '0px',
+          paddingTop: '0px',
+          paddingLeft: '0px',
+          paddingRight: '0px',
         }}
       >
-        {/* Inner container morphs into a floating card on scroll */}
+        {/* Inner container stays full width and does not shrink or morph */}
         <div
           className="mx-auto w-full transition-all duration-500 relative"
           style={{
-            maxWidth: scrolled ? '1100px' : '100%',
-            background: scrolled ? 'rgba(8, 4, 18, 0.78)' : 'transparent',
-            backdropFilter: scrolled ? 'blur(24px) saturate(160%)' : 'none',
-            borderBottom: scrolled ? 'none' : '1px solid rgba(255,255,255,0.02)',
-            border: scrolled ? '1px solid rgba(139, 92, 246, 0.25)' : '1px solid transparent',
-            borderRadius: scrolled ? '24px' : '0px',
-            boxShadow: scrolled ? '0 10px 40px rgba(0,0,0,0.6), 0 0 45px rgba(139,92,246,0.12)' : 'none',
+            maxWidth: '100%',
+            background: scrolled ? 'rgba(8, 4, 18, 0.90)' : 'rgba(8, 4, 18, 0.65)',
+            backdropFilter: 'blur(20px) saturate(160%)',
+            borderBottom: '1px solid rgba(139, 92, 246, 0.15)',
+            borderRadius: '0px',
+            boxShadow: scrolled ? '0 8px 30px rgba(0,0,0,0.5)' : 'none',
           }}
         >
-          {/* Animated top line inside rounded boundary */}
-          <div className="absolute top-0 left-0 right-0 h-[1.5px] overflow-hidden" style={{ borderRadius: scrolled ? '24px 24px 0 0' : '0' }}>
+          {/* Animated top line */}
+          <div className="absolute top-0 left-0 right-0 h-[1.5px] overflow-hidden">
             <div
               className="h-full w-full"
               style={{
