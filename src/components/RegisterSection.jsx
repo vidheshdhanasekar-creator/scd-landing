@@ -22,7 +22,7 @@ function Barcode() {
 function HoloTicket({ flipped, onFlip }) {
   return (
     <div
-      className="relative cursor-pointer select-none w-[340px] h-[500px] lg:w-[680px] lg:h-[320px] transition-all duration-500"
+      className="relative cursor-pointer select-none w-[340px] h-[500px] lg:w-[780px] lg:h-[360px] transition-all duration-500"
       style={{ perspective: 1200 }}
       onClick={onFlip}
     >
@@ -67,32 +67,32 @@ function HoloTicket({ flipped, onFlip }) {
           />
 
           {/* Perforation Line (Vertical on Desktop, Horizontal on Mobile) */}
-          <div className="absolute border-dashed border-purple-400/20 w-0 h-full border-l left-[440px] hidden lg:block" />
+          <div className="absolute border-dashed border-purple-400/20 w-0 h-full border-l left-[510px] hidden lg:block" />
           <div className="absolute border-dashed border-purple-400/20 h-0 w-full border-t top-[320px] lg:hidden" />
           
           {/* Perforation Notches */}
-          <div className="absolute w-7 h-7 rounded-full bg-[#0a0a0f] top-[306px] -left-[14px] lg:top-[-14px] lg:left-[426px]" />
-          <div className="absolute w-7 h-7 rounded-full bg-[#0a0a0f] top-[306px] -right-[14px] lg:bottom-[-14px] lg:left-[426px]" />
+          <div className="absolute w-7 h-7 rounded-full bg-[#0a0a0f] top-[306px] -left-[14px] lg:top-[-14px] lg:left-[496px]" />
+          <div className="absolute w-7 h-7 rounded-full bg-[#0a0a0f] top-[306px] -right-[14px] lg:bottom-[-14px] lg:left-[496px]" />
 
-          <div className="relative p-6 lg:p-7 h-full flex flex-col lg:flex-row justify-between">
+          <div className="relative p-6 lg:p-8 h-full flex flex-col lg:flex-row justify-between">
             
             {/* Front Left / Main Ticket (Header & Details) */}
-            <div className="flex flex-col lg:w-[400px] lg:h-full justify-between">
+            <div className="flex flex-col lg:w-[460px] lg:h-full justify-between">
               {/* Header */}
               <div className="flex items-start justify-between">
                 <div>
-                  <div className="text-[9px] font-black tracking-[0.3em] text-purple-400/70 uppercase mb-2">
+                  <div className="text-[9px] lg:text-[10px] font-black tracking-[0.3em] text-purple-400/70 uppercase mb-2">
                     ✦ ADMIT ONE ✦
                   </div>
-                  <div className="text-2xl lg:text-3xl font-black text-white leading-tight">Student</div>
-                  <div className="text-2xl lg:text-3xl font-black leading-tight"
+                  <div className="text-2xl lg:text-4xl font-black text-white leading-tight">Student</div>
+                  <div className="text-2xl lg:text-4xl font-black leading-tight"
                     style={{ background: 'linear-gradient(135deg,#c084fc,#7c3aed)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                     Community Day
                   </div>
-                  <div className="text-xl font-black text-white/80 mt-0.5">2026</div>
+                  <div className="text-xl lg:text-2xl font-black text-white/80 mt-0.5">2026</div>
                 </div>
                 <div className="flex flex-col items-center gap-1.5 flex-shrink-0">
-                  <div className="w-14 h-14 rounded-2xl bg-black/40 border border-purple-500/30 flex items-center justify-center p-2.5">
+                  <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-2xl bg-black/40 border border-purple-500/30 flex items-center justify-center p-2.5">
                     <img src="/aws.svg" alt="AWS" className="w-full h-full object-contain brightness-0 invert"
                       onError={e => { e.target.style.display='none'; }} />
                   </div>
@@ -101,19 +101,19 @@ function HoloTicket({ flipped, onFlip }) {
               </div>
 
               {/* Details (Date & Venue) */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 mt-4 lg:mt-0">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-4 lg:mt-0">
                 {[
                   { icon: '📅', label: 'Date', value: eventData.date, sub: '8:00 AM – 4:30 PM' },
                   { icon: '🏛️', label: 'Venue', value: eventData.venueFull, sub: eventData.location },
                 ].map(item => (
                   <div key={item.label}
-                    className="flex items-center gap-3 px-3 py-2 rounded-xl"
+                    className="flex items-center gap-3 px-3.5 py-2.5 lg:py-3.5 lg:px-4 rounded-xl lg:rounded-2xl lg:h-[84px]"
                     style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                    <span className="text-lg flex-shrink-0">{item.icon}</span>
+                    <span className="text-lg lg:text-xl flex-shrink-0">{item.icon}</span>
                     <div className="min-w-0">
-                      <div className="text-[9px] text-purple-400/60 font-bold uppercase tracking-widest">{item.label}</div>
-                      <div className="text-white text-xs font-bold leading-tight truncate">{item.value}</div>
-                      {item.sub && <div className="text-gray-500 text-[10px] truncate">{item.sub}</div>}
+                      <div className="text-[9px] lg:text-[10px] text-purple-400/60 font-bold uppercase tracking-widest">{item.label}</div>
+                      <div className="text-white text-xs lg:text-sm font-bold leading-tight truncate">{item.value}</div>
+                      {item.sub && <div className="text-gray-500 text-[10px] lg:text-xs truncate">{item.sub}</div>}
                     </div>
                   </div>
                 ))}
@@ -121,16 +121,16 @@ function HoloTicket({ flipped, onFlip }) {
             </div>
 
             {/* Front Right / Stub (Ticket Details & Barcode) */}
-            <div className="lg:w-[200px] lg:h-full flex flex-col justify-between pt-6 lg:pt-0">
+            <div className="lg:w-[220px] lg:h-full flex flex-col justify-between pt-6 lg:pt-0 lg:pl-4">
               <div className="flex flex-col justify-between h-full">
                 <div className="flex items-center lg:items-start justify-between lg:flex-col gap-2">
                   <div>
-                    <div className="text-[9px] text-purple-400 font-black tracking-widest">TICKET #SCD2026</div>
-                    <div className="text-[9px] text-gray-600">meetup.com</div>
+                    <div className="text-[9px] lg:text-[10px] text-purple-400 font-black tracking-widest">TICKET #SCD2026</div>
+                    <div className="text-[9px] lg:text-[10px] text-gray-600">meetup.com</div>
                   </div>
                   <div className="text-right lg:text-left">
-                    <div className="text-[9px] text-gray-500">Organizer</div>
-                    <div className="text-[9px] text-purple-300 font-bold">AWS SBG SMVEC</div>
+                    <div className="text-[9px] lg:text-[10px] text-gray-500">Organizer</div>
+                    <div className="text-[9px] lg:text-[10px] text-purple-300 font-bold">AWS SBG SMVEC</div>
                   </div>
                 </div>
                 <div className="mt-4 lg:mt-0 flex justify-center lg:justify-start">
@@ -152,13 +152,13 @@ function HoloTicket({ flipped, onFlip }) {
           <div className="absolute top-0 left-0 right-0 h-1.5"
             style={{ background: 'linear-gradient(90deg, #6d28d9, #a855f7, #7c3aed)' }} />
 
-          <div className="relative p-6 h-full flex flex-col lg:flex-row justify-between">
+          <div className="relative p-6 lg:p-8 h-full flex flex-col lg:flex-row justify-between">
             
             {/* Back Left / Agenda Section */}
-            <div className="flex flex-col lg:w-[400px] justify-between h-full">
+            <div className="flex flex-col lg:w-[460px] justify-between h-full">
               <div className="text-center lg:text-left mb-4 lg:mb-2">
-                <div className="text-[9px] text-purple-400 font-black tracking-[0.3em] uppercase mb-1">Day Schedule</div>
-                <div className="text-lg font-black text-white">Event Agenda</div>
+                <div className="text-[9px] lg:text-[10px] text-purple-400 font-black tracking-[0.3em] uppercase mb-1">Day Schedule</div>
+                <div className="text-lg lg:text-2xl font-black text-white">Event Agenda</div>
                 <div className="w-10 h-0.5 mx-auto lg:mx-0 mt-1.5"
                   style={{ background: 'linear-gradient(90deg,#7c3aed,#a855f7)' }} />
               </div>
@@ -167,14 +167,14 @@ function HoloTicket({ flipped, onFlip }) {
               <div className="relative flex-1 overflow-hidden flex items-center">
                 
                 {/* Grid layout for agenda list */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-1.5 opacity-20 blur-[1px] select-none pointer-events-none w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 opacity-20 blur-[1px] select-none pointer-events-none w-full">
                   {agenda.map((item, i) => (
                     <div key={i}
                       className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl"
                       style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)' }}>
                       <span className="text-sm flex-shrink-0">{item.icon}</span>
-                      <span className="text-purple-400 font-mono text-[9px] font-bold w-10 flex-shrink-0">{item.time}</span>
-                      <span className="text-gray-300 text-[10px] leading-tight truncate">{item.title}</span>
+                      <span className="text-purple-400 font-mono text-[9px] lg:text-[10px] font-bold w-10 flex-shrink-0">{item.time}</span>
+                      <span className="text-gray-300 text-[10px] lg:text-xs leading-tight truncate">{item.title}</span>
                     </div>
                   ))}
                 </div>
@@ -202,15 +202,15 @@ function HoloTicket({ flipped, onFlip }) {
               </div>
 
               <div className="mt-3 text-center lg:text-left">
-                <div className="text-[9px] text-gray-600">Click to flip back</div>
+                <div className="text-[9px] lg:text-[10px] text-gray-600">Click to flip back</div>
               </div>
             </div>
 
             {/* Back Right / Desktop TBA Panel */}
-            <div className="hidden lg:flex w-[200px] h-full flex-col items-center justify-center text-center pl-4 border-l border-dashed border-purple-400/20">
-              <div className="text-[10px] text-purple-400/50 font-bold uppercase tracking-widest mb-2">Agenda Status</div>
+            <div className="hidden lg:flex w-[220px] h-full flex-col items-center justify-center text-center pl-6 border-l border-dashed border-purple-400/20">
+              <div className="text-[10px] lg:text-[11px] text-purple-400/50 font-bold uppercase tracking-widest mb-2">Agenda Status</div>
               <div
-                className="text-white font-black tracking-[0.2em] uppercase select-none text-sm"
+                className="text-white font-black tracking-[0.2em] uppercase select-none text-sm lg:text-base"
                 style={{
                   background: 'linear-gradient(135deg, #c084fc, #7c3aed, #c084fc)',
                   WebkitBackgroundClip: 'text',
@@ -221,7 +221,7 @@ function HoloTicket({ flipped, onFlip }) {
               >
                 To Be Announced
               </div>
-              <div className="text-[9px] text-gray-500 mt-2 max-w-[150px] leading-normal">
+              <div className="text-[9px] lg:text-xs text-gray-500 mt-2 max-w-[170px] leading-relaxed">
                 Full session speaker lineup & schedule coming soon!
               </div>
             </div>
@@ -237,7 +237,7 @@ function HoloTicket({ flipped, onFlip }) {
         }
         @keyframes beamSlide {
           0%,100% { transform: rotate(25deg) translateX(-80px); }
-          50% { transform: rotate(25deg) translateX(650px); }
+          50% { transform: rotate(25deg) translateX(750px); }
         }
       `}</style>
     </div>
