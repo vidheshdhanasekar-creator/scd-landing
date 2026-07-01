@@ -23,7 +23,7 @@ export const eventData = {
 export const navLinks = [
   { label: 'Get Tickets', href: '#register', highlight: true },
   { label: 'Tracks', href: '#tracks' },
-  { label: 'Wht Attend?', href: '#why-attend' },
+  { label: 'Why Attend?', href: '#why-attend' },
   { label: 'Speakers', href: '#speakers' },
   { label: 'Sponsors', href: '#sponsors' },
   { label: 'Call for Speakers', href: '#call-for-speakers' },
