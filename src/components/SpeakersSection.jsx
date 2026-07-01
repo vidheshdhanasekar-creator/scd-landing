@@ -29,6 +29,13 @@ const speakers = [
     talk: 'Beyond the Prompt: Build the Next Era of Agentic AI with AWS',
     image: '/Keeran.png',
   },
+  {
+    name: 'Mrs. Vinolin Jermiah J',
+    role: 'AWS Enterprise AI, Migration & Modernization Expert @ Trainocate India',
+    tags: ['Champion AAI', 'Databricks Certified Instructor', 'AWS Community Builder'],
+    talk: 'Building Autonomous Multi-Agent AI Applications with Amazon Bedrock',
+    image: '/vinolin.png',
+  },
 ];
 
 function SpeakerCard({ speaker, index }) {
@@ -62,14 +69,14 @@ function SpeakerCard({ speaker, index }) {
       {/* Content below image */}
       <div className="relative p-5 flex flex-col flex-1 bg-gradient-to-b from-[#0d0520] to-[#12082a]">
 
-        {/* Name & role — min-height so all cards align */}
-        <div className="min-h-[52px]">
-          <h3 className="text-lg font-bold text-white leading-tight">{speaker.name}</h3>
-          <p className="text-amber-400 text-sm mt-0.5 font-medium">{speaker.role}</p>
+        {/* Name & role — fixed height to handle long names/roles */}
+        <div className="min-h-[72px]">
+          <h3 className="text-base font-bold text-white leading-tight">{speaker.name}</h3>
+          <p className="text-amber-400 text-xs mt-0.5 font-medium leading-snug">{speaker.role}</p>
         </div>
 
-        {/* Tags — 2 per row, fixed height so TALK always aligns */}
-        <div className="grid grid-cols-2 gap-2 mt-3 h-20 content-start">
+        {/* Tags — 2 per row, fixed height to fit up to 3 tags (2 rows) */}
+        <div className="grid grid-cols-2 gap-2 mt-3 h-24 content-start">
           {speaker.tags.map((tag) => (
             <span
               key={tag}
@@ -117,9 +124,9 @@ export default function SpeakersSection() {
           </p>
         </div>
 
-        {/* Speaker cards — 4 columns on large, 2 on medium, 1 on mobile */}
+        {/* Speaker cards — 3 columns on large, 2 on medium, 1 on mobile */}
         <div
-          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 transition-all duration-1000 delay-200 ${
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
