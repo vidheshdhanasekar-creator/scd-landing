@@ -110,6 +110,16 @@ export default function Navbar() {
                   >
                     {inner}
                   </button>
+                ) : link.isBadge ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onMouseEnter={() => setHoveredLink(link.label)}
+                    onMouseLeave={() => setHoveredLink(null)}
+                    className="relative px-3.5 py-2 rounded-xl flex items-center"
+                  >
+                    {inner}
+                  </a>
                 ) : (
                   <a
                     key={link.label}
@@ -203,6 +213,15 @@ export default function Navbar() {
                   style={{ color: '#9ca3af', transitionDelay: `${i * 30}ms` }}>
                   <span className="w-1 h-1 rounded-full bg-purple-500/50" />{link.label}
                 </button>
+              ) : link.isBadge ? (
+                <a key={link.label} href={link.href} onClick={closeMobile}
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200"
+                  style={{ color: '#9ca3af', transitionDelay: `${i * 30}ms` }}
+                  onMouseEnter={e => (e.currentTarget.style.background = 'rgba(139,92,246,0.08)')}
+                  onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                >
+                  <span className="w-1 h-1 rounded-full bg-purple-500/50" />{link.label}
+                </a>
               ) : (
                 <a key={link.label} href={link.href} onClick={closeMobile}
                   className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200"

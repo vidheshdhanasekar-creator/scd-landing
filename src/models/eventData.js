@@ -26,7 +26,7 @@ export const navLinks = [
   { label: 'Why Attend?', href: '#why-attend' },
   { label: 'Speakers', href: '#speakers' },
   { label: 'Sponsors', href: '#sponsors' },
-  { label: 'Call for Speakers', href: '#call-for-speakers' },
+  { label: 'Badge', href: '/badge', isBadge: true },
   { label: 'Contact Us', href: '#contact' },
   { label: 'Code of Conduct', href: '#conduct', isCoC: true },
 ];

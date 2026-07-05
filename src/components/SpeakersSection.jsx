@@ -27,7 +27,7 @@ const speakers = [
     role: 'Senior Technical Account Manager @ Amazon Web Services',
     tags: ['Cloud Operations Architect', 'AWS Healthcare & Life Sciences Solutions'],
     talk: 'Beyond the Prompt: Build the Next Era of Agentic AI with AWS',
-    image: '/Keeran.png',
+    image: '/Keeran.jpeg',
   },
   {
     name: 'Mrs. Vinolin Jermiah J',
@@ -35,6 +35,13 @@ const speakers = [
     tags: ['Champion AAI', 'Databricks Certified Instructor', 'AWS Community Builder'],
     talk: 'Building Autonomous Multi-Agent AI Applications with Amazon Bedrock',
     image: '/vinolin.png',
+  },
+  {
+    name: 'Mr. Vijayaraghavan (Vijay) Vashudevan',
+    role: 'AWS Community Builder · Tech Speaker · Quality Automation Specialist',
+    tags: ['AWS Community Builder', 'Tech Speaker', 'Quality Automation Specialist'],
+    talk: 'Build Your AI Career Mentor Copilot with Kiro',
+    image: '/Vijayaraghavan.png',
   },
 ];
 

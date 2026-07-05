@@ -5,7 +5,6 @@ import TracksSection from '../components/TracksSection';
 import WhyAttendSection from '../components/WhyAttendSection';
 import SpeakersSection from '../components/SpeakersSection';
 import SponsorsSection from '../components/SponsorsSection';
-import CallForSpeakers from '../components/CallForSpeakers';
 import ContactSection from '../components/ContactSection';
 
 export default function HomePage() {
@@ -18,7 +17,6 @@ export default function HomePage() {
       <WhyAttendSection />
       <SpeakersSection />
       <SponsorsSection />
-      <CallForSpeakers />
       <ContactSection />
     </main>
   );
