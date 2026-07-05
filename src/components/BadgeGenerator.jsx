@@ -237,14 +237,12 @@ See you there! 👋
         <div className="flex flex-col md:flex-row items-start justify-center gap-6 xl:gap-8">
 
           {/* ── Col 1: badge preview ──────────────────────────────────── */}
-          <div className="w-full md:w-auto shrink-0 flex justify-center md:block md:sticky md:top-6">
-            <div className="w-full" style={{ maxWidth: 280 }}>
-              <BadgePreview
-                badgeDataUrl={badgeDataUrl}
-                croppedSrc={croppedSrc}
-                isGenerating={isGenerating}
-              />
-            </div>
+          <div className="w-full shrink-0 flex justify-center md:block md:sticky md:top-6" style={{ minWidth: 220, maxWidth: 300 }}>
+            <BadgePreview
+              badgeDataUrl={badgeDataUrl}
+              croppedSrc={croppedSrc}
+              isGenerating={isGenerating}
+            />
           </div>
 
           {/* ── Col 2: steps ──────────────────────────────────────────── */}
