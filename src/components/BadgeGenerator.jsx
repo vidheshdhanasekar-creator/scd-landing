@@ -191,21 +191,7 @@ export default function BadgeGenerator() {
   const canGenerate = step1Done && step2Done && !isGenerating;
 
   // ── copy post caption ─────────────────────────────────────────────────────
-  const POST_CAPTION = `🎉 Excited to be attending AWS Student Community Day 2026! ☁️🚀
-Looking forward to a day of learning, networking, and connecting with the AWS community.
-
-📍 Sri Manakula Vinayagar Engineering College, Puducherry
-📅 25th July 2026
-🕗 8:00 AM to 4:30 PM
-
-If you're attending too, let's meet, connect, and share ideas!
-
-🎟️ Register: https://sbg-smvec.vercel.app/
-📢 Meetup: https://www.meetup.com/aws-sbg-at-sri-manakula-vinayagar-engineering-college/events/315050413/
-
-See you there! 👋
-
-#AWS #AWSStudentCommunityDay #SCD2026 #CloudComputing #AI #DevOps #Networking #Puducherry #SMVEC`;
+  const POST_CAPTION = `🚀 Excited to be attending AWS Student Community Day Puducherry 2025!Looking forward to a day of insightful technical sessions, networking with the AWS community, and learning from industry experts.If you're interested in cloud computing, AI, or building your career in tech, you should definitely join us!🎁 Want to win exclusive AWS goodies?Generate your personalized event badge, share it on LinkedIn with #AWSscdpdy, and the posts with the highest engagement will be recognized during the event!📝 Register for the Event:https://sbg-smvec.vercel.app/🎖️ Generate Your Badge:https://sbg-smvec.vercel.app/badge📅 Event Date: 25 July 2025📍 Venue: Sri Manakula Vinayagar Engineering College, PuducherrySee you there! ☁️#AWSscdpdy #AWS #AWSStudentCommunityDay #AWSStudentBuilderGroup #CloudComputing #SMVEC #Puducherry #TechCommunity`;
 
   const handleCopy = useCallback(() => {
     navigator.clipboard.writeText(POST_CAPTION).then(() => {
