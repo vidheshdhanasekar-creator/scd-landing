@@ -1,82 +1,11 @@
 import { useState } from 'react';
-import { Sparkles, X } from 'lucide-react';
 import { useNavbar } from '../controllers/useNavbar';
 import { navLinks, eventData } from '../models/eventData';
 import CoCModal from './CoCModal';
 
-/* ── Coming Soon Modal ──────────────────────────────────────────────────── */
-function BadgeComingSoonModal({ open, onClose }) {
-  if (!open) return null;
-  return (
-    <div
-      className="fixed inset-0 z-[999] flex items-center justify-center p-4"
-      style={{ background: 'rgba(5,0,15,0.80)', backdropFilter: 'blur(8px)' }}
-      onClick={onClose}
-    >
-      <div
-        className="relative w-full max-w-sm rounded-3xl p-8 flex flex-col items-center gap-5 text-center"
-        style={{
-          background: 'linear-gradient(145deg,#0e0420,#130830)',
-          border: '1px solid rgba(168,85,247,0.35)',
-          boxShadow: '0 0 60px rgba(139,92,246,0.25), 0 24px 60px rgba(0,0,0,0.6)',
-        }}
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* Close */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 w-7 h-7 rounded-full flex items-center justify-center text-gray-500 hover:text-white transition-colors"
-          style={{ background: 'rgba(255,255,255,0.05)' }}
-        >
-          <X className="w-4 h-4" />
-        </button>
-
-        {/* Icon */}
-        <div
-          className="w-16 h-16 rounded-2xl flex items-center justify-center"
-          style={{ background: 'linear-gradient(135deg,rgba(124,58,237,0.3),rgba(168,85,247,0.2))', border: '1px solid rgba(168,85,247,0.4)' }}
-        >
-          <Sparkles className="w-8 h-8 text-purple-400" />
-        </div>
-
-        {/* Text */}
-        <div>
-          <p className="text-purple-400 text-xs tracking-[0.25em] uppercase font-semibold mb-2">
-            Coming Soon
-          </p>
-          <h2 className="text-white font-black text-2xl mb-3">
-            Badge Generator
-          </h2>
-          <p className="text-gray-400 text-sm leading-relaxed">
-            We're putting the finishing touches on your personalised attendee badge.
-            It'll be live shortly — stay tuned! ☁️✨
-          </p>
-        </div>
-
-        {/* Countdown hint */}
-        <div
-          className="w-full rounded-xl px-4 py-3 text-xs text-purple-300 font-medium"
-          style={{ background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.18)' }}
-        >
-          🗓 Event · 25th July 2026 · SMVEC, Puducherry
-        </div>
-
-        <button
-          onClick={onClose}
-          className="w-full py-2.5 rounded-xl text-white text-sm font-bold transition-all hover:opacity-90 active:scale-[0.98]"
-          style={{ background: 'linear-gradient(135deg,#7c3aed,#a855f7)' }}
-        >
-          Got it
-        </button>
-      </div>
-    </div>
-  );
-}
-
 export default function Navbar() {
   const { scrolled, mobileOpen, toggleMobile, closeMobile, activeSection } = useNavbar();
-  const [cocOpen,    setCocOpen]    = useState(false);
-  const [badgeOpen,  setBadgeOpen]  = useState(false);
+  const [cocOpen, setCocOpen] = useState(false);
   const [hoveredLink, setHoveredLink] = useState(null);
 
   const navItems = navLinks.filter(l => !l.highlight);
@@ -84,7 +13,6 @@ export default function Navbar() {
   return (
     <>
       <CoCModal open={cocOpen} onClose={() => setCocOpen(false)} />
-      <BadgeComingSoonModal open={badgeOpen} onClose={() => setBadgeOpen(false)} />
 
       <nav
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
@@ -183,15 +111,15 @@ export default function Navbar() {
                     {inner}
                   </button>
                 ) : link.isBadge ? (
-                  <button
+                  <a
                     key={link.label}
-                    onClick={() => setBadgeOpen(true)}
+                    href={link.href}
                     onMouseEnter={() => setHoveredLink(link.label)}
                     onMouseLeave={() => setHoveredLink(null)}
                     className="relative px-3.5 py-2 rounded-xl flex items-center"
                   >
                     {inner}
-                  </button>
+                  </a>
                 ) : (
                   <a
                     key={link.label}
@@ -286,15 +214,14 @@ export default function Navbar() {
                   <span className="w-1 h-1 rounded-full bg-purple-500/50" />{link.label}
                 </button>
               ) : link.isBadge ? (
-                <button key={link.label}
-                  onClick={() => { closeMobile(); setBadgeOpen(true); }}
-                  className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 w-full text-left"
+                <a key={link.label} href={link.href} onClick={closeMobile}
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200"
                   style={{ color: '#9ca3af', transitionDelay: `${i * 30}ms` }}
                   onMouseEnter={e => (e.currentTarget.style.background = 'rgba(139,92,246,0.08)')}
                   onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
                 >
                   <span className="w-1 h-1 rounded-full bg-purple-500/50" />{link.label}
-                </button>
+                </a>
               ) : (
                 <a key={link.label} href={link.href} onClick={closeMobile}
                   className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200"
