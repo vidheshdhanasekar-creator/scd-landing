@@ -191,7 +191,7 @@ export default function BadgeGenerator() {
   const canGenerate = step1Done && step2Done && !isGenerating;
 
   // ── copy post caption ─────────────────────────────────────────────────────
-  const POST_CAPTION = `🚀 Excited to be attending AWS Student Community Day Puducherry 2025!
+  const POST_CAPTION = `🚀 Excited to be attending AWS Student Community Day Puducherry 2026!
 
 Looking forward to a day of insightful technical sessions, networking with the AWS community, and learning from industry experts.
 
@@ -207,7 +207,7 @@ https://sbg-smvec.vercel.app/
 https://sbg-smvec.vercel.app/badge
 
 
-📅 Event Date: 25 July 2025
+📅 Event Date: 25 July 2026
 📍 Venue: Sri Manakula Vinayagar Engineering College, Puducherry
 
 See you there! ☁️
