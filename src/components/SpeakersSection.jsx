@@ -37,6 +37,13 @@ const speakers = [
     image: '/vinolin.png',
   },
   {
+    name: 'Mr. Dineshraj Dhanapathy',
+    role: 'AWS Community Builder · Quality Automation Specialist',
+    tags: ['AWS Community Builder', 'Quality Automation Specialist'],
+    talk: 'Build Your AI Career Mentor Copilot with Kiro',
+    image: '/Dinesh.png',
+  },
+  {
     name: 'Mr. Vijayaraghavan (Vijay) Vashudevan',
     role: 'AWS Community Builder · Tech Speaker · Quality Automation Specialist',
     tags: ['AWS Community Builder', 'Tech Speaker', 'Quality Automation Specialist'],
