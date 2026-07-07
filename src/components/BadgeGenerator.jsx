@@ -244,7 +244,7 @@ See you there! ☁️
         <div className="flex flex-col md:flex-row items-start justify-center gap-6 xl:gap-8">
 
           {/* ── Col 1: badge preview ──────────────────────────────────── */}
-          <div className="w-full shrink-0 flex justify-center md:block md:sticky md:top-6" style={{ minWidth: 220, maxWidth: 300 }}>
+          <div className="shrink-0 mx-auto md:mx-0 md:sticky md:top-6" style={{ width: '100%', maxWidth: 300 }}>
             <BadgePreview
               badgeDataUrl={badgeDataUrl}
               croppedSrc={croppedSrc}
